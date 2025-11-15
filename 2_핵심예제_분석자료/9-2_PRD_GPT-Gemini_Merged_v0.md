@@ -1,7 +1,7 @@
-# Product Requirement Document: AI 기반 창업 성장 플랫폼 v0.2
+# Product Requirement Document: AI 기반 창업 성장 플랫폼 v0.3
 
 - **Owner**: Product & Engineering
-- **Last Updated**: 2025-11-14
+- **Last Updated**: 2025-11-15
 
 ---
 
@@ -175,3 +175,5 @@
 - **페르소나/CJM**: `2_핵심예제 분석자료/6_SaaS_형_온라인_비즈니스_컨설팅_시장의_고객_페르소나_스펙트럼_고객_여정지도.md`
 - **JTBD 인터뷰**: `2_핵심예제 분석자료/8-2_SaaS형_온라인_비즈니스_컨설팅_JTBD_가상인터뷰_결과지.md`
 - **Value Proposition Sheet**: `2_핵심예제 분석자료/Gemini-ValueProPositionSheet/Gemini-ValueProPositionSheet.md`, `2_핵심예제 분석자료/GPT-ValueProPositionSheet/GPT-ValueProPositionSheet.md`
+
+| 이 자료는 GPT 결과와 Gemini 결과를 합친 것임
