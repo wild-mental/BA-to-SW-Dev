@@ -375,11 +375,6 @@ risk_notes:
   - 주요 사용자 플로우에 대해,  
     FE 프로토타입(Task Epic 0) → 기능 구현(Task REQ-FUNC) → NFR(Task REQ-NF)이 자연스럽게 연결되는지 확인한다.
 
-- **실제 에이전트 실행 파일럿**
-  - FE 프로토타입 Task 묶음(Epic 0)에서 1개, REQ-FUNC 기반 기능 Task 묶음에서 1개 이상을 선택한다.
-  - 실제 AI 에이전트에게 해당 Task 정의만을 입력으로 주고, 구현 결과를 평가한다.
-  - 부족한 정보/필드/가이드는 단계 0의 템플릿 및 작성 가이드를 개선하는 피드백으로 반영한다.
-
 ---
 
 ## 단계 7. PRD-SRS-Task 3단계 변경사항 싱크 및 버전관리 전략
@@ -417,6 +412,12 @@ risk_notes:
 
 - **가이드에 포함할 내용**
   - Task 정의서의 기본 구조(Human-readable 섹션 + YAML 블록)와 각 필드의 의미.
+  - 통합 Task Tree(WBS)와 의존성 그래프(DAG)의 해석 및 활용 방법:
+    - WBS 레벨 구조(Epic → Feature → REQ-FUNC/REQ-NF → 컴포넌트별 구현/테스트 Task)를 어떻게 읽고, 특정 Epic/Feature/REQ 단위로 작업 범위를 필터링·집계하는지.
+    - WBS를 기준으로 “어떤 REQ-FUNC/REQ-NF에 대해 어떤 컴포넌트 Task가 이미 정의/완료되었는지”, “누락된 Task는 무엇인지”를 점검하는 방법.
+    - DAG에서 `A --> B`가 “A가 선행, B가 후행”을 의미함을 명시하고, `DB → Backend → Engine/외부 시스템 → API → Frontend → E2E Test` / `템플릿·룰셋 설계 → 구현 → 모니터링·알림 설정 → 성능·품질 검증`과 같은 계층 예시를 들어 해석 방법을 설명.
+    - DAG를 사용해 현재 착수 가능한 Task 집합(모든 `dependencies`가 완료된 노드), 병렬 실행 가능 영역, 크리티컬 패스를 계산하여 스프린트 계획·릴리즈 계획에 반영하는 방법.
+    - Mermaid Graph 등으로 시각화된 WBS/DAG를 에이전트 오케스트레이터가 참고하여 Task 선택·우선순위 조정·진행 상태 업데이트를 수행하는 방법.
   - 에이전트에게 Task를 줄 때:
     - 어떤 YAML 필드를 그대로 넘기는지,
     - 어떤 Human-readable 설명을 프롬프트에 포함하는지,
