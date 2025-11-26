@@ -3,7 +3,7 @@
 | 필드 | 작성 가이드 |
 | --- | --- |
 | **Persona / Segment** | 코어·확장·극단·비활성 중 분류 + 짧은 설명(직무/맥락) |
-| **Situation (When …)** | 전환을 유발한 “상황적 맥락” 한 문장 |
+| **Situation (When …)** | 신규 솔루션 채택을 유발한 “상황적 맥락” 한 문장 |
 | **Job Statement (… I want to …)** | 사용자가 “해결하려는 핵심 일(진보)” 한 문장 |
 | **Desired Outcome (… so I can …)** | **달성하고 싶은 결과(측정 가능 표현)** |
 | **4 Forces** | Push(현상 불만), Pull(새 솔루션 매력), Habit(관성), Anxiety(불안) 각 1–2줄 |
